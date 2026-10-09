@@ -4,7 +4,7 @@
   
 
 ```python
-def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
+def min_max(nums):
     if len(nums) == 0:
         raise ValueError
     min = nums[0]
