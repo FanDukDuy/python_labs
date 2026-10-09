@@ -1,4 +1,8 @@
-def transpose(mat):
+def transpose(mat: list[list[float | int]]) -> list[list]:
+    """
+    Меняет строки и столбцы матрицы местами.
+    Если матрица рваная, вызывает ValueError.
+    """
     if mat == []:
         return []
     length = len(mat[0])
@@ -14,7 +18,11 @@ def transpose(mat):
     return result
 
 
-def row_sums(mat):
+def row_sums(mat: list[list[float | int]]) -> list[float]:
+    """
+    Считает сумму чисел в каждой строке матрицы.
+    Если матрица рваная, вызывает ValueError.
+    """
     if mat == []:
         return []
     length = len(mat[0])
@@ -30,7 +38,11 @@ def row_sums(mat):
     return result
 
 
-def col_sums(mat):
+def col_sums(mat: list[list[float | int]]) -> list[float]:
+    """
+    Считает сумму чисел в каждом столбце матрицы.
+    Если матрица рваная, вызывает ValueError.
+    """
     if mat == []:
         return []
     length = len(mat[0])
@@ -51,10 +63,10 @@ print(transpose([[1, 2], [3, 4]]))
 print(transpose([]))
 print(transpose([[1, 2], [3]])) """
 
-print(row_sums([[1, 2, 3], [4, 5, 6]]))
+"""print(row_sums([[1, 2, 3], [4, 5, 6]]))
 print(row_sums([[-1, 1], [10, -10]]))
 print(row_sums([[0, 0], [0, 0]]))
-print(row_sums([[1, 2], [3]]))
+print(row_sums([[1, 2], [3]]))"""
 
 
 """ print(col_sums([[1, 2, 3], [4, 5, 6]]))

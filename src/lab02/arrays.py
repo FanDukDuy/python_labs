@@ -1,4 +1,8 @@
-def min_max(nums):
+def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
+    """
+    Находит минимальное и максимальное число в списке.
+    Если список пустой, вызывает ValueError.
+    """
     if len(nums) == 0:
         raise ValueError
     min = nums[0]
@@ -12,7 +16,10 @@ def min_max(nums):
 
 
 
-def unique_sorted(nums):
+def unique_sorted(nums: list[float | int]) -> list[float | int]:
+    """
+    Убирает повторяющиеся числа и сортирует их по возрастанию.
+    """
     unique = []
     for x in nums:
         if x not in unique:
@@ -25,7 +32,11 @@ def unique_sorted(nums):
 
 
 
-def flatten(mat):
+def flatten(mat: list[list | tuple]) -> list:
+    """
+    Объединяет списки и кортежи в один список.
+    Если элемент не список и не кортеж, вызывает TypeError.
+    """
     result = []
     for row in mat:
         if not isinstance(row, (list, tuple)):

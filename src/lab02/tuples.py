@@ -1,4 +1,8 @@
-def format_record(rec):
+def format_record(rec: tuple[str, str, float]) -> str:
+    """
+    Убирает лишние пробелы, формирует инициалы и выводит GPA с двумя знаками после точки.
+    При некорректных данных вызывает ошибку.
+    """
     fio = rec[0]
     group = rec[1]
     gpa = rec[2]

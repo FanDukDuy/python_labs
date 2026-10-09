@@ -103,6 +103,9 @@ def col_sums(mat):
 
 ```python
 def format_record(rec):
+    """
+    htdhydh
+    """
     fio = rec[0]
     group = rec[1]
     gpa = rec[2]
