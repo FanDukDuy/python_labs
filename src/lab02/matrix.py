@@ -29,6 +29,7 @@ def row_sums(mat):
         result.append(total)
     return result
 
+
 def col_sums(mat):
     if mat == []:
         return []
@@ -50,10 +51,10 @@ print(transpose([[1, 2], [3, 4]]))
 print(transpose([]))
 print(transpose([[1, 2], [3]])) """
 
-""" print(row_sums([[1, 2, 3], [4, 5, 6]]))
+print(row_sums([[1, 2, 3], [4, 5, 6]]))
 print(row_sums([[-1, 1], [10, -10]]))
 print(row_sums([[0, 0], [0, 0]]))
-print(row_sums([[1, 2], [3]])) """
+print(row_sums([[1, 2], [3]]))
 
 
 """ print(col_sums([[1, 2, 3], [4, 5, 6]]))
