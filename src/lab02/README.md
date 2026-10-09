@@ -4,7 +4,11 @@
   
 
 ```python
-def min_max(nums):
+def min_max(nums: list[float | int]) -> tuple[float | int, float | int]:
+    """
+    Находит минимальное и максимальное число в списке.
+    Если список пустой, вызывает ValueError.
+    """
     if len(nums) == 0:
         raise ValueError
     min = nums[0]
@@ -18,7 +22,10 @@ def min_max(nums):
 
 
 
-def unique_sorted(nums):
+def unique_sorted(nums: list[float | int]) -> list[float | int]:
+    """
+    Убирает повторяющиеся числа и сортирует их по возрастанию.
+    """
     unique = []
     for x in nums:
         if x not in unique:
@@ -31,7 +38,11 @@ def unique_sorted(nums):
 
 
 
-def flatten(mat):
+def flatten(mat: list[list | tuple]) -> list:
+    """
+    Объединяет списки и кортежи в один список.
+    Если элемент не список и не кортеж, вызывает TypeError.
+    """
     result = []
     for row in mat:
         if not isinstance(row, (list, tuple)):
@@ -48,7 +59,11 @@ def flatten(mat):
 #### Задание 2
 
 ```python
-def transpose(mat):
+def transpose(mat: list[list[float | int]]) -> list[list]:
+    """
+    Меняет строки и столбцы матрицы местами.
+    Если матрица рваная, вызывает ValueError.
+    """
     if mat == []:
         return []
     length = len(mat[0])
@@ -64,7 +79,11 @@ def transpose(mat):
     return result
 
 
-def row_sums(mat):
+def row_sums(mat: list[list[float | int]]) -> list[float]:
+    """
+    Считает сумму чисел в каждой строке матрицы.
+    Если матрица рваная, вызывает ValueError.
+    """
     if mat == []:
         return []
     length = len(mat[0])
@@ -79,7 +98,12 @@ def row_sums(mat):
         result.append(total)
     return result
 
-def col_sums(mat):
+
+def col_sums(mat: list[list[float | int]]) -> list[float]:
+    """
+    Считает сумму чисел в каждом столбце матрицы.
+    Если матрица рваная, вызывает ValueError.
+    """
     if mat == []:
         return []
     length = len(mat[0])
@@ -102,9 +126,10 @@ def col_sums(mat):
 #### Задание 3
 
 ```python
-def format_record(rec):
+def format_record(rec: tuple[str, str, float]) -> str:
     """
-    htdhydh
+    Убирает лишние пробелы, формирует инициалы и выводит GPA с двумя знаками после точки.
+    При некорректных данных вызывает ошибку.
     """
     fio = rec[0]
     group = rec[1]
