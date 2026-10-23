@@ -9,7 +9,8 @@ def normalize(text: str, *, casefold: bool = True, yo2e: bool = True) -> str:
 
 def tokenize(text: str) -> list[str]:
     """Разбивает текст на слова (буквы, цифры, дефис внутри слова)."""
-    return re.findall(r"\w+(?:-\w+)*", text)
+    pattern = r"\w+(?:-\w+)*"
+    return re.findall(pattern, text)
 
 
 def count_freq(tokens: list[str]) -> dict[str, int]:
