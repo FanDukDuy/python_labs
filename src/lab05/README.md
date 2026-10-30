@@ -90,3 +90,4 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 
 
 ![](../../images/lab05/03.png)
+![](../../images/lab05/033.png)
