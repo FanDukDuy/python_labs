@@ -30,10 +30,6 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
         writer.writerows(data)
 
 
-![](../../images/lab05/01.png)
-![](../../images/lab05/011.png)
-
-
 def csv_to_json(csv_path: str, json_path: str) -> None:
     '''Преобразует CSV в JSON (список словарей).'''
     if Path(csv_path).suffix != ".csv" or Path(json_path).suffix != ".json":
@@ -54,6 +50,8 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 ```
 
+![](../../images/lab05/01.png)
+![](../../images/lab05/011.png)
 ![](../../images/lab05/02.png)
 ![](../../images/lab05/022.png)
 
