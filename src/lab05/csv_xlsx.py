@@ -22,6 +22,6 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
 
     for col in ws.columns:
         width = max(len(str(cell.value or "")) for cell in col)
-        ws.column_dimensions[col[0].column_letter].width = max(8, width)
+        ws.column_dim[col[0].column_letter].width = max(8, width)
 
     wb.save(xlsx_path)
