@@ -1,0 +1,4 @@
+Python is a great programming language.
+Python is easy to learn and Python is very powerful.
+Many developers love Python for data analysis and web development.
+Learning Python opens many doors in programming.
